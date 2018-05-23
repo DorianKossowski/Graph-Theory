@@ -10,7 +10,7 @@ def gen_list(n, p):
 				from_start = r.random()
 				from_end = r.random()
 				bigger, start_bigger = (from_start, True) if from_start >= from_end else (from_end, False)
-				if bigger > p:
+				if bigger < p:
 					if start_bigger and end not in adj_list[start]:
 						adj_list[start].append(end)
 					elif start not in adj_list[end]:
